@@ -1,0 +1,48 @@
+<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+    <name>EULER-TEST-3</name>
+    <vcpu>1</vcpu>
+    <memory>2048</memory>
+    <os>
+        <type arch='x86_64'>hvm</type>
+        <boot dev='hd'/>
+    </os>
+    <devices>
+        <emulator>/usr/libexec/qemu-kvm</emulator>
+        <disk type='file' device='disk'>
+            <source file='/apps/vmimages/EULER-TEST-3/sys_disk'/>
+            <target dev='vda'/>
+            <driver name='qemu' type='qcow2' cache='none'/>
+        </disk>
+        <disk type='file' device='cdrom'>
+            <source file='/apps/vmimages/EULER-TEST-3/data_disk'/>
+            <target dev='hdc'/>
+            <readonly/>
+            <driver name='qemu' type='raw'/>
+        </disk>
+        <disk type='file' device='disk'>
+            <source file='/apps/vmimages/EULER-TEST-3/init_iso'/>
+            <target dev='vdb'/>
+            <driver name='qemu' type='qcow2' cache='none'/>
+        </disk>
+        <controller type='scsi' index='0' model='virtio-scsi'>
+            <address type='pci' domain='0x0000' bus='0x00' slot='0x09' function='0x0'/>
+        </controller>
+        <interface type='bridge'>
+            <source bridge='BRIDGE1'/>
+            <mac address='ce:fc:7e:60:4d:14'/>
+            <model type='virtio'/>
+        </interface>
+        <graphics type='vnc' listen='0.0.0.0' port='-1' passwd='Gl_#9uzh'/>
+        <input type='tablet' bus='usb'/>
+        <serial type='pty'>
+            <target port='0'/>
+        </serial>
+        <console type='pty'>
+            <target type='serial' port='0'/>
+        </console>
+    </devices>
+    <features>
+        <acpi/>
+    </features>
+    <clock offset='localtime'/>
+</domain>

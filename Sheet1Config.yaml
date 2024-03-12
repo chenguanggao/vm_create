@@ -1,0 +1,105 @@
+physical_machines:
+    192.168.3.106:
+        ip: 192.168.3.106
+        user: root
+        password: "1"
+        connected_vms:
+            - hostname: EULER-TEST-2
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.202
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:13
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
+            - hostname: EULER-TEST-3
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.203
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:14
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
+            - hostname: EULER-TEST-4
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.204
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:15
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
+            - hostname: EULER-TEST-5
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.205
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:16
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
+    192.168.3.107:
+        ip: 192.168.3.107
+        user: root
+        password: "5"
+        connected_vms:
+            - hostname: EULER-TEST-5
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.205
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:16
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
+    192.168.3.108:
+        ip: 192.168.3.108
+        user: root
+        password: "6"
+        connected_vms:
+            - hostname: EULER-TEST-5
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.206
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:16
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
+    192.168.3.109:
+        ip: 192.168.3.109
+        user: root
+        password: "7"
+        connected_vms:
+            - hostname: EULER-TEST-5
+              os: windows_server_qcow2
+              cpu: 1
+              memory: 2
+              osdisk: 500
+              datadisk: 500
+              eth0: 192.168.101.207
+              eth0vlan: 1
+              eth0gateway: 192.168.101.2
+              eth0mac: ce:fc:7e:60:4d:16
+              eth0net: ens33
+              eth0netmask: 255.255.255.0
