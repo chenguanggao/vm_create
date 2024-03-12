@@ -1,8 +1,8 @@
-BINARY="vm.exe"
 
-build:
-	go build -o ${BINARY} main.go
-
+TOOLS_DIR := build.sh
+build: clean
+	@echo "build vm bin "
+	$(TOOLS_DIR)
 run:
 	go run  main.go
 
@@ -10,7 +10,9 @@ gotool:
 	go fmt ./
 	go vet ./
 
-
+clean:
+	@echo "===========> Cleaning all build output"
+	@-rm -rf main.exe
 help:
 	@echo "make - 格式化 Go 代码, 并编译生成二进制文件"
 	@echo "make build - 编译 Go 代码, 生成二进制文件"
